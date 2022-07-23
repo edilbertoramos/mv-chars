@@ -1,0 +1,27 @@
+ platform :ios, '13.0'
+
+target 'MVChars' do
+  use_frameworks!
+  
+  # Restfull library
+  pod 'Alamofire'
+  pod 'AlamofireImage'
+
+  # Database
+  pod 'RealmSwift', '10.17.0'
+  
+  # Autolayout
+  pod 'SteviaLayout'
+
+  # Animation
+  pod 'SkeletonView'
+
+  target 'MVCharsTests' do
+    inherit! :complete
+  end
+
+  target 'MVCharsUITests' do
+    inherit! :complete
+  end
+
+end
