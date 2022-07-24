@@ -19,6 +19,12 @@
 		EB33620C288C5FF6004A155A /* MVCharsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB33620B288C5FF6004A155A /* MVCharsTests.swift */; };
 		EB336216288C5FF6004A155A /* MVCharsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB336215288C5FF6004A155A /* MVCharsUITests.swift */; };
 		EB336218288C5FF6004A155A /* MVCharsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB336217288C5FF6004A155A /* MVCharsUITestsLaunchTests.swift */; };
+		EB6111CD288C864200D564A9 /* MVServiceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6111CC288C864200D564A9 /* MVServiceHelper.swift */; };
+		EB6111CF288C864F00D564A9 /* MVServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6111CE288C864F00D564A9 /* MVServiceError.swift */; };
+		EB6111D1288C866C00D564A9 /* MVServiceHttpStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6111D0288C866C00D564A9 /* MVServiceHttpStatusCode.swift */; };
+		EB6111D3288C867800D564A9 /* MVServiceEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6111D2288C867800D564A9 /* MVServiceEndpoint.swift */; };
+		EB6111D5288C86AF00D564A9 /* MVServiceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6111D4288C86AF00D564A9 /* MVServiceResponse.swift */; };
+		EB6111D7288C86FD00D564A9 /* MVError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6111D6288C86FD00D564A9 /* MVError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +67,12 @@
 		EB336211288C5FF6004A155A /* MVCharsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVCharsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB336215288C5FF6004A155A /* MVCharsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVCharsUITests.swift; sourceTree = "<group>"; };
 		EB336217288C5FF6004A155A /* MVCharsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVCharsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EB6111CC288C864200D564A9 /* MVServiceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVServiceHelper.swift; sourceTree = "<group>"; };
+		EB6111CE288C864F00D564A9 /* MVServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVServiceError.swift; sourceTree = "<group>"; };
+		EB6111D0288C866C00D564A9 /* MVServiceHttpStatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVServiceHttpStatusCode.swift; sourceTree = "<group>"; };
+		EB6111D2288C867800D564A9 /* MVServiceEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVServiceEndpoint.swift; sourceTree = "<group>"; };
+		EB6111D4288C86AF00D564A9 /* MVServiceResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVServiceResponse.swift; sourceTree = "<group>"; };
+		EB6111D6288C86FD00D564A9 /* MVError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +141,7 @@
 		EB3361F3288C5FF5004A155A /* MVChars */ = {
 			isa = PBXGroup;
 			children = (
+				EB6111CA288C85C600D564A9 /* MVCore */,
 				EB3361F4288C5FF5004A155A /* AppDelegate.swift */,
 				EB3361F6288C5FF5004A155A /* SceneDelegate.swift */,
 				EB3361F8288C5FF5004A155A /* ViewController.swift */,
@@ -155,6 +168,27 @@
 				EB336217288C5FF6004A155A /* MVCharsUITestsLaunchTests.swift */,
 			);
 			path = MVCharsUITests;
+			sourceTree = "<group>";
+		};
+		EB6111CA288C85C600D564A9 /* MVCore */ = {
+			isa = PBXGroup;
+			children = (
+				EB6111CB288C861400D564A9 /* MVServices */,
+			);
+			path = MVCore;
+			sourceTree = "<group>";
+		};
+		EB6111CB288C861400D564A9 /* MVServices */ = {
+			isa = PBXGroup;
+			children = (
+				EB6111D6288C86FD00D564A9 /* MVError.swift */,
+				EB6111D2288C867800D564A9 /* MVServiceEndpoint.swift */,
+				EB6111CE288C864F00D564A9 /* MVServiceError.swift */,
+				EB6111CC288C864200D564A9 /* MVServiceHelper.swift */,
+				EB6111D0288C866C00D564A9 /* MVServiceHttpStatusCode.swift */,
+				EB6111D4288C86AF00D564A9 /* MVServiceResponse.swift */,
+			);
+			path = MVServices;
 			sourceTree = "<group>";
 		};
 		FD9AA847F776519913502200 /* Frameworks */ = {
@@ -424,8 +458,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB6111CD288C864200D564A9 /* MVServiceHelper.swift in Sources */,
+				EB6111D1288C866C00D564A9 /* MVServiceHttpStatusCode.swift in Sources */,
+				EB6111D7288C86FD00D564A9 /* MVError.swift in Sources */,
 				EB3361F9288C5FF5004A155A /* ViewController.swift in Sources */,
 				EB3361F5288C5FF5004A155A /* AppDelegate.swift in Sources */,
+				EB6111D3288C867800D564A9 /* MVServiceEndpoint.swift in Sources */,
+				EB6111D5288C86AF00D564A9 /* MVServiceResponse.swift in Sources */,
+				EB6111CF288C864F00D564A9 /* MVServiceError.swift in Sources */,
 				EB3361F7288C5FF5004A155A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
